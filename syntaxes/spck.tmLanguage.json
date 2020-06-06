@@ -1,0 +1,145 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Simpack",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constant"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#supp1"
+		},
+		{
+			"include": "#supp2"
+		},
+		{
+			"include": "#supp3"
+		},
+		{
+			"include": "#supp4"
+		},
+		{
+			"include": "#string1"
+		},
+		{
+			"include": "#string2"
+		},
+		{
+			"include": "#formula"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.spck",
+					"match": "\\b(if|while|for|return|begin|end)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.spck",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.spck",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.exclamation-mark.spck",
+					"match": "!.*"
+				}
+			]
+		},
+		"constant": {
+			"patterns": [
+				{
+					"name": "constant.numeric.spck",
+					"match": "[0-9]"
+				}
+			]
+		},
+		"variable": {
+			"patterns": [
+				{
+					"name": "variable.parameter.spck",
+					"match": "\\$\\w+"
+				}
+			]
+		},
+		"supp1": {
+			"patterns": [
+				{
+					"name": "support.function.spck",
+					"match": "\\.([^\\d\\W])+"
+				}
+			]
+		},
+		"supp2": {
+			"patterns": [
+				{
+					"name": "storage.class.spck",
+					"match": "\\b[^\\d\\W]+\\b"
+				}
+			]
+		},
+		"supp3": {
+			"patterns": [
+				{
+					"name": "support.function.spck",
+					"match": "\\b(.3d|.2d)\\b"
+				}
+			]
+		},
+		"supp4": {
+			"patterns": [
+				{
+					"name": "storage.class.spck",
+					"match": "\\b(prop3d|prop2d)\\b"
+				}
+			]
+		},
+		"string1": {
+			"patterns": [
+				{
+					"name": "string.quoted.spck",
+					"match": "\\'(.*?)\\'"
+				}
+			]
+		},
+		"string2": {
+			"patterns": [
+				{
+					"name": "string.quoted.spck",
+					"match": "\\\"(.*?)\\\""
+				}
+			]
+		},
+		"formula": {
+			"patterns": [
+				{
+					"name": "support.type.spck",
+					"match": "\\{(.*?)\\}"
+				}
+			]
+		}
+		
+	},
+	"scopeName": "source.spck"
+}

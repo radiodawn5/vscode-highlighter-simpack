@@ -1,0 +1,51 @@
+{
+    "name": "simpack",
+    "displayName": "Simpack",
+    "description": "Syntax Highlighting for Simpack Model Files",
+    "publisher": "radiodawn5",
+    "version": "0.0.3",
+    "engines": {
+        "vscode": "^1.45.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/radiodawn5/vscode-highlighter-simpack.git"
+    },
+    "icon": "images/icon.png",
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "spck",
+                "aliases": [
+                    "Simpack",
+                    "SIMPACK",
+                    "spck",
+                    "if2",
+                    "afs",
+                    "subvar",
+                    "buspck",
+                    "pspck"
+                ],
+                "extensions": [
+                    ".spck",
+                    ".buspck",
+                    ".pspck",
+                    ".subvar",
+                    ".if2",
+                    ".afs"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "spck",
+                "scopeName": "source.spck",
+                "path": "./syntaxes/spck.tmLanguage.json"
+            }
+        ]
+    }
+}
