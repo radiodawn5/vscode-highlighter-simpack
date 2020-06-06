@@ -350,4 +350,7 @@ MigrationBackup/
 .ionide/
 
 # Images
-*.png
+Images/
+
+# Test Files
+test/
